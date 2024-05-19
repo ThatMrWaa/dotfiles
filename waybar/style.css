@@ -1,0 +1,147 @@
+* {
+  font-family: JetBrainsMono;
+  padding: 0px 4px;
+  color: white; 
+}
+
+window#waybar {
+  font-size: 12px;
+  color: white;
+  font-weight: normal;
+  background: transparent;
+  border-radius: 40px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#battery,
+#clock, 
+#cpu,
+#disk,
+#memory,
+#network,
+#pulseaudio,
+#mpd,
+#custom-launcher,
+#temperature,
+#workspaces
+#custom-power {
+  color: white;
+  background-color: #24283b;
+  border-radius: 20px;
+  margin: 1 9px;
+}
+
+label:focus {
+  background-color: #000;
+}
+
+#battery.warning.charging *{
+  color: white;
+}
+
+#battery.critical *{
+  color: #e06c75;
+}
+
+#tags button {
+  background-color: #24283b;
+  color: white;
+  border-radius: 15px;
+  margin: 0 3px;
+}
+
+#tags button.occupied {
+  margin: 0 3px;
+  background-color: #194aac;
+}
+
+#tags button.focused {
+  color: #000;
+  margin: 0 3px;
+  background-color: white;
+}
+
+#tags button.urgent{
+  color: red;
+  margin: 0 3px;
+  background-color:white;
+}
+
+/*ANIMATIONS*/
+@keyframes animate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*BORDER RADIUS*/
+#workspaces,
+#custom-launcher,
+#cpu,
+#disk,
+#memory{
+  border-radius: 3px 10px 3px 10px;
+}
+
+#clock, 
+#network,
+#pulseaudio,
+#custom-power{
+  border-radius: 10px 3px 10px 3px;
+}
+
+#workspaces {
+  background: #313244
+}
+
+#custom-launcher , #custom-power {
+  color: red;
+  font-size: 15px;
+}
+
+#cpu, #clock {
+  background: #313244;
+}
+
+#memory, #pulseaudio {
+  background: #313244;
+}
+
+#disk, #network {
+  background: #00A36C;
+}
+
+#battery {
+  background: #F4BB44;
+}
+
+#window {
+  border-radius: 10px;
+  font-size: 12px;
+  background: #313244
+  /* background: linear-gradient(-45deg, #a6e3a1, #74c7ec);
+  background-size: 400% 400%;
+  animation: animate 9s ease infinite; */
+}
+
+#workspaces button.urgent * {
+  color: #630330;
+}
+
+#idle_inhibitor {
+    padding: 0px;
+}
+
+#mpd {
+  background: transparent;
+  font-size: 12px;
+}
